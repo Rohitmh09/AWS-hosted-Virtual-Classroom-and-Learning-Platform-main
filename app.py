@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import timedelta
 
 app = Flask(__name__)
-app.secret_key = "JDehVR/0g+boMBIo/HO7hGU49gvbTAwE/XqEsUly" # 15-6-2025  updated 
+app.secret_key = "__YOUR_SECRET_KEY__" # 15-6-2025  updated 
 app.permanent_session_lifetime = timedelta(minutes=15)  # Session timeout
 
 # AWS S3 Config
@@ -14,7 +14,7 @@ S3_REGION = 'eu-north-1'
 s3 = boto3.client('s3', region_name=S3_REGION)
 
 # Database Config
-DB_HOST = 'my-db.c1e2607igi2i.eu-north-1.rds.amazonaws.com' 
+DB_HOST = '__YOUR_HOST_NAME__' 
 DB_USER = 'admin'
 DB_PASSWORD = 'Ram393'
 DB_NAME = 'my-db'
